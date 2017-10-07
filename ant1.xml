@@ -1,0 +1,28 @@
+
+<project name="SwingChatRoomMVC.jar" default="all" >
+
+        <target name="make.dirs" description="Make some dirs">
+     
+ <mkdir dir="build"/>
+       <mkdir dir="build/class"/>
+
+        </target>
+
+        <target name="compile" description="compile java" depends="make.dirs">
+
+  <javac destdir="build/class">
+      <src path="src"/>
+       </javac>
+        </target>
+
+        <target name="SwingChatRoomMVC.jar" description="make jar file" depends="compile">
+       <jar destfile="build/SwingChatRoomMVC.jar">
+      <fileset dir="build/class">
+    <include name="**/*.class"/>
+    
+      </fileset>
+       </jar>
+        </target>
+
+        <target name="all" description="Do the build" depends="SwingChatRoomMVC.jar"/>
+  </project>

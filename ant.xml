@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SwingChatRoomMVC.jar" default="all" basedir=".">
+<target name="path">
+<property name="srcDir" location="src"/>
+<property name="buildDir" location="build"/>
+<property name="dstDir" location="dist"/>
+
+<target name="init">
+<tstamp/>
+<mkdir dir="${buildDir}"></mkdir>
+<mkdir dir="${distDir}">
+</mkdir>
+</target>
+
+
+
+<target name="compile" depends="init">
+<javac srcdir="${srcDir}" destDir="${buildDir}"/>
+</target>
+
+<target name="SwingChatRoomMVC.jar" depends="compile">
+</target>
+
+
+</target>
+
+</project>
